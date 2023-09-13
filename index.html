@@ -134,6 +134,10 @@
 				border: 0;
 				padding: 0;
 			}
+			#mbg{
+				height: 116px;
+				background-size: cover !important;
+			}
 		}
 
 		.Btn {
@@ -148,7 +152,10 @@
 			text-decoration: none;
 			font-size: 16px;
 		}
-
+		#simg{
+			max-width:unset !important;
+			width: 209px !important;
+		}	
 		@media (min-width:768px) {
 			tr.reverse {
 				display: flex;
@@ -179,7 +186,28 @@
 				padding-left: 0px;
 			}
 		}
+		#sicons td{
+			padding:0px !important;
+		}
+		#sicons, #sicons tbody, #sicons tr{
+			    width: 100% !important;
+				display:block !important
+		}
+		#sicons tr {
+			justify-content: center;
+			display: flex !important;
+			gap: 12px;
+		}
 		@media(max-width:767px) {
+			#sicons td{
+				padding:0px !important;
+			}
+			#sicons tr{
+				gap:0px !important;
+			}
+			#simg{
+				width: auto !important;
+			}	
 			tr.reverse {
 				display: flex;
 				flex-direction: row;
@@ -224,11 +252,11 @@
 
 			.displayGrid {
 				display: grid;
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: repeat(1, 1fr);
 			}
 
 			.positionImage {
-				padding-top: 25px;
+				padding-top:0px;
 			}
 
 			img.fullWidth {
@@ -1553,7 +1581,7 @@
 							<tr class="displayGrid">
 								<td class="column column-1"
 									style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left; font-weight: 400; padding-bottom: 0px; padding-top: 0px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;background-image: url('images/footer-top.jpeg'); background-blend-mode: multiply;background-size: contain;background-repeat: no-repeat;"
-									width="75%">
+									width="75%" id="mbg">
 									<table border="0" cellpadding="15" cellspacing="0" class="text_block block-1"
 										role="presentation"
 										style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
@@ -1587,7 +1615,7 @@
 													style="line-height:10px; background-color: #00469B;">
 													<img alt="I'm an image" src="images/23.jpg"
 														style="height: auto; display: block; border: 0; max-width: 170px; width: 100%;"
-														title="I'm an image" width="170">
+														title="I'm an image" width="170" id="simg">
 												</div>
 											</td>
 										</tr>
@@ -1642,7 +1670,7 @@
 										<tr>
 											<td class="pad">
 												<div align="center" class="alignment">
-													<table border="0" cellpadding="0" cellspacing="0"
+													<table id="sicons" border="0" cellpadding="0" cellspacing="0"
 														class="social-table" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;"
 														width="260px">
